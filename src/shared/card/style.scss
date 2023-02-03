@@ -1,0 +1,44 @@
+@import '../style-config/mixins.scss';
+@import '../style-config/variable.scss';
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  transition: all ease-in;
+  animation: slide 2s 0.5s ;
+  .card {
+    border: 2rem solid #78b07f;
+    border-radius: 3rem;
+    position: relative;
+    width: 50vw;
+    height: 70vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-start;
+    text-align: left;
+    .card-content {
+        @include glassmorphism-effect;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        .text {
+            padding: 2rem 0;
+        }
+    }
+    
+  }
+}
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100vw);
+    }
+}

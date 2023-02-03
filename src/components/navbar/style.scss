@@ -1,0 +1,26 @@
+@import "../../shared/style-config/mixins.scss";
+@import "../../shared/style-config/variable.scss";
+
+.navbar-wrapper {
+  .nav-items {
+    width: 30%;
+    list-style-type: none;
+    display: flex;
+    position: fixed;
+    left: 50%;
+    bottom: 3%;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2rem;
+    z-index: 10;
+    transform: translateX(-50%);
+    @include glassmorphism-effect();
+    .nav-item {
+      svg {
+        transform: scale(2);
+        color: green;
+      }
+    }
+  }
+}

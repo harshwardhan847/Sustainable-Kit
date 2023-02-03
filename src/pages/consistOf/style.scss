@@ -1,0 +1,11 @@
+.consist-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#c1d1a0 ;
+    .title  {
+        margin: 2rem;
+    }
+}

@@ -1,0 +1,39 @@
+@import "../../../shared/style-config/mixins.scss";
+.intro-content {
+  margin: auto;
+  padding: 1rem;
+  @include glassmorphism-effect;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3rem;
+    word-wrap: break-word;
+    padding-left: 3rem;
+    border-radius: 5rem;
+    width: 50vw;
+    height: 60vh;
+   
+    .main-title {
+      text-align: left;
+      
+    }
+    h2 {
+      text-align: left;
+      padding-bottom: 3rem;
+    }
+  }
+  img {
+    padding: 2rem;
+    padding-left: 0;
+    width: 25vw;
+    border-radius: 50%;
+  }
+}
