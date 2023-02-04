@@ -1,23 +1,29 @@
-@import '../../shared/style-config/mixins.scss';
-@import '../../shared/style-config/variable.scss';
+@import "../../shared/style-config/mixins.scss";
+@import "../../shared/style-config/variable.scss";
 
 .call-to-action-button {
-    background-color: $green;
-    display: inline;
-    color: $white;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 1rem;
-    letter-spacing: 0.16rem;
-    @include typography(1rem, 500);
-    transition: background-color 0.2s ease-in;
-    cursor: pointer;
-    .icon {
-        svg {
-            transform: scale(1.5);
-        }
+  background-color: $green;
+  display: inline;
+  color: $white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  letter-spacing: 0.16rem;
+  @include typography(1rem, 500);
+  box-shadow: inset 0 0 0 0 white;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover,
+    &.active {
+      box-shadow: inset 200px 0 0 0 $white;
+      color: $green;
     }
-    &:hover{
-        background-color: $lightGreen;
+  .icon {
+    svg {
+      transform: scale(1.5);
     }
+  }
+  &:hover {
+    background-color: $lightGreen;
+  }
 }

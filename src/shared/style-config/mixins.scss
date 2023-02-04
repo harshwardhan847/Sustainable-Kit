@@ -6,17 +6,17 @@
   line-height: $lineHeight;
 }
 @mixin large-screen {
-  @media only screen and (min-width: 1441px) {
+  @media only screen and (max-width: 1155px) {
     @content;
   }
 }
 @mixin medium-screen {
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (max-width: 678px) {
     @content;
   }
 }
 @mixin small-screen {
-  @media only screen and (min-width: 950px) {
+  @media only screen and (max-width: 449px) {
     @content;
   }
 }
@@ -31,4 +31,29 @@
 @mixin transition ($time: 200ms) {
     transition: all $time cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
+@mixin slide-up {
+  animation: slideUp 0.4s ease-in;
+  
+}
+@mixin fade {
+  animation: fade 0.4s ease-in;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,67 @@
+@import "./../../shared/style-config/variable.scss";
+@import "./../../shared/style-config//mixins.scss";
+
+.features-wrapper {
+  width: 100vw;
+  height: 100vh;
+  font-family: roman;
+  // background: url("https://i0.wp.com/revithatch.com/wp-content/uploads/2019/02/huge1-1.png?fit=2048%2C2048&ssl=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  
+  background-color: #f8a104;
+  h2 {
+    font-size: 5rem;
+    text-align: center;
+    color: black;
+    padding: 5rem;
+    border-bottom: 4px solid black;
+    @include large-screen {
+      font-size: 4rem;
+      padding: 4rem;
+    }
+    @include medium-screen {
+      font-size: 3rem;
+      padding: 1rem;
+    }
+  }
+  .features {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 0 10rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      text-align: justify;
+      width: 100%;
+      color: white;
+      li {
+        list-style-type: disc;
+        font-size: 2.3rem;
+        line-height: 5rem;
+        font-weight: bold;
+        @include large-screen {
+          font-size: 1.4rem;
+          line-height: 3.4rem;
+        }
+        @include medium-screen {
+          font-size: 1rem;
+          line-height: 5rem;
+        }
+        @include small-screen {
+          line-height: 3rem;
+        }
+      }
+    }
+    @include medium-screen {
+      padding: 0 5rem;
+    }
+  }
+}

@@ -1,18 +1,19 @@
-@import '../style-config/mixins.scss';
-@import '../style-config/variable.scss';
+@import "../style-config/mixins.scss";
+@import "../style-config/variable.scss";
 
 .card-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  transition: all ease-in;
-  animation: slide 2s 0.5s ;
+  transform: translateX(-102vw);
+  animation: slide 3s cubic-bezier(0, 1, 1, -0.01);
+  // animation: zoom 3s ease-in-out;
   .card {
-    border: 2rem solid #78b07f;
+    border: 0.3rem solid rgb(0, 0, 0);
     border-radius: 3rem;
     position: relative;
-    width: 50vw;
+    width: 80vw;
     height: 70vh;
     padding: 1rem;
     display: flex;
@@ -24,21 +25,31 @@
     align-items: flex-start;
     text-align: left;
     .card-content {
-        @include glassmorphism-effect;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        .text {
-            padding: 2rem 0;
-        }
+      @include glassmorphism-effect;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      .text {
+        padding: 2rem 0;
+      }
     }
-    
   }
 }
 @keyframes slide {
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100vw);
-    }
+  from {
+    transform: translateX(102vw);
+  }
+  to {
+    transform: translateX(-102vw);
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0.8);
+  }
+  50%{
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
 }

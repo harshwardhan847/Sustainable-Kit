@@ -10,7 +10,15 @@ const IntroContent = () => {
         <h1 className="main-title">Sustainability Starter Kit</h1>
         <h2>starter kit is all you need to start the revolution. </h2>
         <div className="buy-now">
-          <CallToAction icon={<AiOutlineShoppingCart />} text="Buy Now" />
+          <CallToAction
+            icon={<AiOutlineShoppingCart />}
+            action={() => {
+              window.open(
+                "https://www.earthly.ie/product-page/sustainability-starter-pack"
+              );
+            }}
+            text="Buy Now"
+          />
         </div>
       </div>
       <img src={mainProduct} alt="" />

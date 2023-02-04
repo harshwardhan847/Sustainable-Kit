@@ -15,12 +15,76 @@
     border-radius: 2rem;
     z-index: 10;
     transform: translateX(-50%);
+    @include small-screen {
+      width: 70%;
+    }
+
     @include glassmorphism-effect();
     .nav-item {
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       svg {
         transform: scale(2);
-        color: green;
+        color: black;
+      }
+      &:hover {
+        transform: scale(2.05);
       }
     }
+    .arrow{
+      display: none;
+    }
+  }
+}
+.top {
+  .nav-item {
+    display: none;
+  }
+  .arrow {
+    display: unset;
+    list-style-type: none;
+    display: flex;
+    position: fixed;
+    left: 80%;
+    bottom: 10%;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50%;
+    z-index: 10;
+    background-color: white;
+    animation: upDown 0.5s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    cursor: pointer;
+    @include medium-screen {
+      left: 80%;
+      bottom: 10%;
+    }
+    @include small-screen {
+      left: 70%;
+      bottom: 5%;
+    }
+    svg {
+      color: $green;
+      transform: scale(2);
+    }
+    
+    
+  }
+  
+}
+@keyframes upDown {
+  from{
+    transform: translateY(-5px);
+  }
+  to{
+    transform: translateY(5px);
+  }
+}
+@keyframes scaleup {
+  from{
+    transform: scale(1.2);
+  }
+  to{
+    transform: scale(1);
   }
 }

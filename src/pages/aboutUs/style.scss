@@ -1,0 +1,46 @@
+@import "../../shared/style-config/mixins.scss";
+
+.about-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(38, 211, 211);
+  h2 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+    @include large-screen {
+      font-size: 3rem;
+    }
+    @include medium-screen {
+      font-size: 2rem;
+    }
+  }
+  .about-disc {
+    padding: 3rem;
+
+    width: 80vw;
+    p {
+      color: white;
+      text-align: center;
+      line-height: 2rem;
+      font-size: 1rem;
+      margin-top: 3rem;
+      @include large-screen {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+      }
+      @include medium-screen {
+        font-size: 0.7rem;
+        line-height: 1.2rem;
+      }
+    }
+  }
+  @include small-screen {
+    height: 120vh;
+  }
+}

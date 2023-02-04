@@ -1,24 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 @import "./shared/style-config/mixins.scss";
 @import "./shared/style-config/variable.scss";
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Aboreto', cursive;
 }
-// body {
-  // overflow-x: hidden
-// }
+body {
+  overflow-x: hidden
+}
 
 p {
   @include typography(14px, 400, 20px);
+  
 }
 h1 {
   @include typography(6rem, 700, 7rem);
+  @include large-screen {
+    @include typography(4rem, 600,5rem)
+  }
+  @include medium-screen{
+    @include typography(3rem, 500, 4rem)
+  }
+  @include small-screen{
+    @include typography(2rem, 500, 4rem)
+  }
 }
 h2 {
   @include typography(2.3rem, 700, 3rem);
+  @include large-screen {
+    @include typography(2rem, 600,5rem)
+  }
+  @include medium-screen {
+    @include typography(1.2rem, 600,5rem)
+  }
+  @include medium-screen {
+    @include typography(1rem, 500,5rem)
+  }
 }
 h3 {
   @include typography(2rem, 400, 2rem);

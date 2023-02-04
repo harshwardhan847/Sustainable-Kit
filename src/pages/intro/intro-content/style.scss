@@ -1,12 +1,13 @@
 @import "../../../shared/style-config/mixins.scss";
 .intro-content {
-  margin: auto;
+  margin-inline: auto;
   padding: 1rem;
+  margin-bottom: 0;
   @include glassmorphism-effect;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  width: 80vw;
-  height: 80vh;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 90vw;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -15,19 +16,34 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 3rem;
-    word-wrap: break-word;
+    word-wrap: normal;
     padding-left: 3rem;
     border-radius: 5rem;
     width: 50vw;
     height: 60vh;
-   
+    @include fade();
+    @include medium-screen {
+      justify-content: center;
+    }
+    @include small-screen {
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 1rem;
+      font-size: 0.2rem;
+      width: 40vw;
+      height: unset;
+      
+    }
+
     .main-title {
       text-align: left;
-      
     }
     h2 {
       text-align: left;
       padding-bottom: 3rem;
+      @include small-screen {
+        line-height: 2rem;
+      }
     }
   }
   img {
@@ -35,5 +51,16 @@
     padding-left: 0;
     width: 25vw;
     border-radius: 50%;
+    @include slide-up();
+    @include small-screen {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+  @include small-screen {
+    flex-direction: column;
+    width: 80vw;
+    height: 90vh;
+    align-items: flex-start;
   }
 }
